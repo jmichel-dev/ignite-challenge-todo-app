@@ -16,8 +16,13 @@
   gap: 0.4rem;
 }
 
+.listItem + .listItem {
+  margin-top: 1.6rem;
+}
+
 .text {
   color: var(--gray-200);
+  flex: 1;
 }
 
 .btnDelete {
