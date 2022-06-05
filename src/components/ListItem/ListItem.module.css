@@ -25,6 +25,12 @@
   flex: 1;
 }
 
+.textDone {
+  color: var(--gray-300);
+  flex: 1;
+  text-decoration: line-through;
+}
+
 .btnDelete {
   border: none;
   background: transparent;

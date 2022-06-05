@@ -6,16 +6,25 @@ import styles from "./ListTodo.module.css";
 interface ListTodoProps {
   todos: Todo[];
   onDeleteTodo: (id: number) => void;
+  onToggleDone: (id: number) => void;
 }
 
-export const ListTodo: React.FC<ListTodoProps> = ({ todos, onDeleteTodo }) => {
+export const ListTodo: React.FC<ListTodoProps> = ({
+  todos,
+  onDeleteTodo,
+  onToggleDone,
+}) => {
   let contentTodoList = <ListTodoEmpty />;
 
   if (todos.length > 0) {
     contentTodoList = (
       <ul className={styles.list}>
         {todos.map((todo) => (
-          <ListItem todo={todo} onDeleteTodo={onDeleteTodo} />
+          <ListItem
+            todo={todo}
+            onDeleteTodo={onDeleteTodo}
+            onToggleDone={onToggleDone}
+          />
         ))}
       </ul>
     );

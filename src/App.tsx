@@ -26,11 +26,31 @@ function App() {
     });
   };
 
+  const handleToggleDoneTodo = (id: number) => {
+    const findTodo = todos.find((todoItem) => todoItem.id === id);
+
+    if (!findTodo) return;
+
+    const updatedTodo = { ...findTodo, done: !findTodo.done };
+
+    setTodos((currentTodos) => {
+      const filteredTodosWithoutTheUpdatedOne = currentTodos.filter(
+        (todoItem) => todoItem.id !== id
+      );
+
+      return [...filteredTodosWithoutTheUpdatedOne, updatedTodo];
+    });
+  };
+
   return (
     <>
       <Header />
       <NewTodoForm onAddNewTodo={handleAddTodo} />
-      <ListTodo todos={todos} onDeleteTodo={handleDeleteTodo} />
+      <ListTodo
+        todos={todos}
+        onDeleteTodo={handleDeleteTodo}
+        onToggleDone={handleToggleDoneTodo}
+      />
     </>
   );
 }
