@@ -1,3 +1,4 @@
+import { ListTodoEmpty } from "../ListTodoEmpty";
 import styles from "./ListTodo.module.css";
 
 export const ListTodo: React.FC = () => {
@@ -13,6 +14,7 @@ export const ListTodo: React.FC = () => {
           <span className={styles.badge}>0</span>
         </div>
       </header>
+      <ListTodoEmpty />
     </div>
   );
 };

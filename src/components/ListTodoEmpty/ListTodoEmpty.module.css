@@ -1,0 +1,27 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 73.6rem;
+  padding: 6.4rem 0;
+  border-top: 1px solid var(--gray-400);
+  margin-top: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin-top: 2.4rem;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: var(--gray-300);
+  line-height: 1.6;
+}
