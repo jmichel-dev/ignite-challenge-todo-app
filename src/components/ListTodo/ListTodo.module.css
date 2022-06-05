@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  max-width: 73.6rem;
+  margin: 0 auto;
+  margin-top: 6.4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.created {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.done {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.badge {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.1rem 0.8rem;
+  border-radius: 1000px;
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+}
