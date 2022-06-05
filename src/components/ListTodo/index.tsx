@@ -1,3 +1,4 @@
+import { ListItem } from "../ListItem";
 import { ListTodoEmpty } from "../ListTodoEmpty";
 import styles from "./ListTodo.module.css";
 
@@ -15,6 +16,9 @@ export const ListTodo: React.FC = () => {
         </div>
       </header>
       <ListTodoEmpty />
+      <ul className={styles.list}>
+        <ListItem />
+      </ul>
     </div>
   );
 };

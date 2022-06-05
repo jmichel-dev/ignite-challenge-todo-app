@@ -35,3 +35,7 @@
   background-color: var(--gray-400);
   color: var(--gray-100);
 }
+
+.list {
+  list-style: none;
+}
