@@ -14,6 +14,13 @@ export const ListTodo: React.FC<ListTodoProps> = ({
   onDeleteTodo,
   onToggleDone,
 }) => {
+  const countTasksDone = todos.reduce((acc, todo) => {
+    if (todo.done) {
+      return acc + 1;
+    }
+    return acc;
+  }, 0);
+
   let contentTodoList = <ListTodoEmpty />;
 
   if (todos.length > 0) {
@@ -39,7 +46,11 @@ export const ListTodo: React.FC<ListTodoProps> = ({
         </div>
         <div className={styles.content}>
           <span className={styles.done}>Tarefas concluídas</span>
-          <span className={styles.badge}>0</span>
+          <span className={styles.badge}>
+            {countTasksDone === 0
+              ? "0"
+              : `${countTasksDone} de ${todos.length}`}
+          </span>
         </div>
       </header>
       {contentTodoList}
